@@ -54,9 +54,9 @@ module Receipts
         if logo.nil?
           move_down 32
         elsif logo.is_a?(String)
-          image open(logo), height: 32
+          image open(logo), height: 150
         else
-          image logo, height: 32
+          image logo, height: 150
         end
 
         move_down 8
