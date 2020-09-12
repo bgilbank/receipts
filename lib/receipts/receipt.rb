@@ -1,5 +1,6 @@
 require 'prawn'
 require 'prawn/table'
+require 'open-uri'
 
 module Receipts
   class Receipt < Prawn::Document
@@ -27,7 +28,7 @@ module Receipts
       end
 
       def default_subheading
-        "RECEIPT FOR CHARGE #%{id}"
+        "RECEIPT FOR CHARGE TESTING #%{id}"
       end
 
       def setup_fonts
