@@ -54,13 +54,13 @@ module Receipts
         if logo.nil?
           move_down 32
         elsif logo.is_a?(String)
-          image open(logo), height: 150
+          image open(logo), height: 150, position: :center
         else
-          image logo, height: 150
+          image logo, height: 150, position: :center
         end
 
-        move_down 8
-        text "<color rgb='a6a6a6'>#{subheading % { id: id }}</color>", inline_format: true
+        move_down 15
+        text "<color rgb='a6a6a6'>#{subheading % { id: id }}</color>", inline_format: true, align: :center
 
         move_down 30
         text message, inline_format: true, size: 12.5, leading: 4
